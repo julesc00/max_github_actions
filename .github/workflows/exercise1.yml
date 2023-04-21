@@ -1,0 +1,28 @@
+---
+name: Exercise One
+
+on: [push]
+
+jobs:
+  deploy-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linting step
+        run: |
+          echo "This is the linting step"
+
+      - name: Test step
+        run: echo "This is the testing step"
+
+      - name: Push step 
+        run: echo "This is the push step"
+
+  output-events-job:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Output Event details on issues
+        run: |
+          echo "[INFO] Output events"
+
+
+
